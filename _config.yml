@@ -1,0 +1,5 @@
+name: The Diary of House Karling
+markdown: redcarpet
+pygments: true
+permalink: pretty
+baseurl: /ckii

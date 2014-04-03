@@ -1,0 +1,18 @@
+---
+layout: with_sidebar
+title: Blog
+---
+
+{% for post in site.posts reversed %}
+    <h2>
+        <a href="{{ site.baseurl }}{{ post.url }}">
+            {{ post.name }}: {{ post.title }}
+            <small>{{ post.date | date: "%d&nbsp;%B&nbsp;%Y" }}</small>
+        </a>
+    </h2>
+    {{ post.content }}
+
+    {% unless forloop.last %}
+        <hr />
+    {% endunless %}
+{% endfor %}

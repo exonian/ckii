@@ -1,0 +1,26 @@
+---
+layout: base
+---
+
+<div class="row">
+    <div class="sidebar span4">
+        <h2>{{ site.name }}</h2>
+        <h3>Chapters</h3>
+        <ul class="unstyled">
+            {% for post in site.posts reversed %}
+                <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.name }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <h3>Contact me</h3>
+        <ul class="unstyled">
+            <li><a href="https://twitter.com/intent/user?screen_name=rogue_michael" class="icon-twitter">@rogue_michael</a></li>
+            <li><a href="mailto:michael@michaelblatherwick.co.uk">Email me</a></li>
+        </ul>
+    </div>
+    <div class="span8">
+        {{ content }}
+    </div>
+</div>
+
+<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
